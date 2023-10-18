@@ -1,0 +1,96 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="section section-catalog">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title section__title--accent">Каталог</h2>
+        <nav class="catalog-nav">
+          <ul class="catalog-nav__wrapper">
+            <li class="catalog-nav__item">
+              <a href="{% url 'bezal' %}"><button class="catalog-nav__btn" type="button">Соки</button></a>
+            </li>
+            <li class="catalog-nav__item">
+              <a href="{% url 'bezalGaz' %}"><button class="catalog-nav__btn" type="button">Газировка</button></a>
+            </li>
+            <li class="catalog-nav__item">
+              <a href="{% url 'bezalEnerg' %}"><button class="catalog-nav__btn is-active" type="button">Энергетик</button></a>
+            </li>   
+            <li class="catalog-nav__item">
+              <a href="{% url 'bezalKvas' %}"><button class="catalog-nav__btn" type="button">Квас</button></a>
+            </li>   
+            <li class="catalog-nav__item">
+              <a href="{% url 'bezalTea' %}"><button class="catalog-nav__btn" type="button">Чай</button></a>
+            </li> 
+          </ul>
+        </nav >
+      </header>
+  
+      <div class="catalog">
+        
+        <div class="catalog__item">
+            <div class="product catalog__product">
+              <img src="{% static 'shop/img/eng1.png' %}" alt="" class="product__img">
+              <div class="product__content">
+                <h3 class="product__title">Red Bull 0,47 л</h3>
+              </div>
+              <footer class="product__footer">
+                <div class="product__bottom">
+                  <div class="product__price"><span class="product__price-value">239 &#8381;</span></div>
+                    <button class="btn priseBtn" type="button" class="items__control" data-action="minus">-</button>
+                    <div class="items__current" data-counter>1</div>
+                    <button class="btn priseBtn" type="button"class="items__control" data-action="plus">+</button>
+                </div>
+              </footer>
+            </div>
+          </div>
+    
+      
+          <div class="catalog__item">
+            <div class="product catalog__product">
+              <img src="{% static 'shop/img/eng1.png' %}" alt="" class="product__img">
+              <div class="product__content">
+                <h3 class="product__title">Red Bull 0,35 л</h3>
+              </div>
+              <footer class="product__footer">
+                <div class="product__bottom">
+                  <div class="product__price"><span class="product__price-value">189 &#8381;</span></div>
+                    <button class="btn priseBtn" type="button" class="items__control" data-action="minus">-</button>
+                    <div class="items__current" data-counter>1</div>
+                    <button class="btn priseBtn" type="button"class="items__control" data-action="plus">+</button>
+                </div>
+              </footer>
+            </div>
+          </div>
+    
+          <div class="catalog__item">
+            <div class="product catalog__product">
+              <img src="{% static 'shop/img/eng2.png' %}" alt="" class="product__img">
+              <div class="product__content">
+                <h3 class="product__title">Адреналин Без Сахара 0,45 л</h3>
+              </div>
+              <footer class="product__footer">
+                <div class="product__bottom">
+                  <div class="product__price"><span class="product__price-value">139 &#8381;</span></div>
+                    <button class="btn priseBtn" type="button" class="items__control" data-action="minus">-</button>
+                    <div class="items__current" data-counter>1</div>
+                    <button class="btn priseBtn" type="button"class="items__control" data-action="plus">+</button>
+                </div>
+              </footer>
+            </div>
+          </div>
+  
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section-catalog -->
+  
+  </body>
+  </html>
+
+{% endblock %}

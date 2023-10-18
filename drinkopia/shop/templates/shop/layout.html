@@ -1,0 +1,77 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Roboto:300&display=swap&subset=cyrillic" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'shop/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/css/components.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/css/header-page.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/css/section-top.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+
+  <title>Shop</title>
+
+  <link rel="shortcut icon" href="{% static 'shop/img/logo.png' %}" type="image/png">
+  <link rel="icon"  href="{% static 'shop/img/logo.png' %}" type="image/png">
+</head>
+
+
+<body>
+
+<!-- header-page -->
+<header class="header-page">
+  <div class="container header-page__container">
+    <div class="header-page__start">
+    </div>
+    <div class="header-page__end">
+      <nav class="header-page__nav">
+        <ul class="header-page__ul">
+          <li class="header-page__li">
+            <a class="header-page__link" href="{% url 'alkogol' %}">
+              <span class="header-page__text">Алкоголь</span>
+            </a>
+          </li>
+          <li class="header-page__li">
+            <a class="header-page__link" href="{% url 'bezal' %}">
+              <span class="header-page__text">Безалкоголь</span>
+            </a>
+          </li>
+          <li class="header-page__li">
+            <a class="header-page__link" href="{% url 'snake' %}">
+              <span class="header-page__text">Закуски</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="phone">
+        <a class="phone__item header-page__phone" target="_blank" href="">Телеграм</a>
+      </div>
+      <div class="header-page__hamburger">
+        <button class="btn-menu" type="button">
+          <span class="btn-menu__box">
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /.header-page -->
+
+{% block content %}
+{% endblock %}
+
+
+<script type="text/javascript" src="{% static 'shop/js/index.js' %}"></script>
+
+
+</body>
+</html>
+
